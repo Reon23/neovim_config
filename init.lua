@@ -41,4 +41,6 @@ require("lazy").setup {
   require "plugins.alpha",
   -- Indent lines
   require "plugins.indent-blankline",
+  -- Miscellaneous plugins
+  require "plugins.misc",
 }
