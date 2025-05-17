@@ -23,6 +23,8 @@ require("lazy").setup({
     require 'plugins.neotree',
     -- Buffer line
     require 'plugins.bufferline',
+    -- Status line
+    require 'plugins.lualine',
     -- Syntax higlighting
     require 'plugins.treesitter',
 })
