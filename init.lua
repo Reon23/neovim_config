@@ -22,5 +22,5 @@ require("lazy").setup({
     -- File tree
     require 'plugins.neotree',
     -- Syntax higlighting
-    require 'plugins.treesitter.lua',
+    require 'plugins.treesitter',
 })
