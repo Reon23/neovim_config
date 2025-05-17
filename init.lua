@@ -1,5 +1,5 @@
-require 'core.options'
-require 'core.keymaps'
+require "core.options"
+require "core.keymaps"
 
 -- [Plugin Manager]
 -- Installs Lazy plugin manager
@@ -16,21 +16,23 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 -- [Plugins]
-require("lazy").setup({
-    -- Color Theme
-    require 'plugins.colorscheme',
-    -- File tree
-    require 'plugins.neotree',
-    -- Buffer line
-    require 'plugins.bufferline',
-    -- Status line
-    require 'plugins.lualine',
-    -- Syntax higlighting
-    require 'plugins.treesitter',
-    -- LSP
-    require 'plugins.lsp',
-    -- AutoCompletion
-    require 'plugins.autocompletion',
-    -- Fuzzy finder
-    require 'plugins.telescope',
-})
+require("lazy").setup {
+  -- Color Theme
+  require "plugins.colorscheme",
+  -- File tree
+  require "plugins.neotree",
+  -- Buffer line
+  require "plugins.bufferline",
+  -- Status line
+  require "plugins.lualine",
+  -- Syntax higlighting
+  require "plugins.treesitter",
+  -- LSP
+  require "plugins.lsp",
+  -- AutoCompletion
+  require "plugins.autocompletion",
+  -- AutoFormatting
+  require "plugins.none-ls",
+  -- Fuzzy finder
+  require "plugins.telescope",
+}
