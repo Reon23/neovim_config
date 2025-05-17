@@ -17,19 +17,10 @@ rtp:prepend(lazypath)
 
 -- [Plugins]
 require("lazy").setup({
--- Syntax higlighting
-{
-  "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  config = function()
-    require("nvim-treesitter.configs").setup {
-      ensure_installed = { "lua", "vim", "bash", "python", "javascript" }, -- add more as needed
-      highlight = {
-        enable = true,
-      },
-    }
-  end
-},
-require 'plugins.colorscheme',
-require 'plugins.neotree',
+    -- Color Theme
+    require 'plugins.colorscheme',
+    -- File tree
+    require 'plugins.neotree',
+    -- Syntax higlighting
+    require 'plugins.treesitter.lua',
 })
