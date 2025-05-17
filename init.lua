@@ -39,4 +39,6 @@ require("lazy").setup {
   require "plugins.gitsigns",
   -- Startup Screen
   require "plugins.alpha",
+  -- Indent lines
+  require "plugins.indent-blankline",
 }
