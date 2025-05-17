@@ -27,4 +27,6 @@ require("lazy").setup({
     require 'plugins.lualine',
     -- Syntax higlighting
     require 'plugins.treesitter',
+    -- Fuzzy finder
+    require 'plugins.telescope',
 })
