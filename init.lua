@@ -21,6 +21,8 @@ require("lazy").setup({
     require 'plugins.colorscheme',
     -- File tree
     require 'plugins.neotree',
+    -- Buffer line
+    require 'plugins.bufferline',
     -- Syntax higlighting
     require 'plugins.treesitter',
 })
