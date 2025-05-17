@@ -35,4 +35,6 @@ require("lazy").setup {
   require "plugins.none-ls",
   -- Fuzzy finder
   require "plugins.telescope",
+  -- Git Signs
+  require "plugins.gitsigns",
 }
