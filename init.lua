@@ -37,4 +37,6 @@ require("lazy").setup {
   require "plugins.telescope",
   -- Git Signs
   require "plugins.gitsigns",
+  -- Startup Screen
+  require "plugins.alpha",
 }
