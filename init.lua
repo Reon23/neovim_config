@@ -13,7 +13,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 ---@type vim.Option
 local rtp = vim.opt.rtp
-rtp:prepend(lazypath) 
+rtp:prepend(lazypath)
 
 -- [Plugins]
 require("lazy").setup({
@@ -29,6 +29,8 @@ require("lazy").setup({
     require 'plugins.treesitter',
     -- LSP
     require 'plugins.lsp',
+    -- AutoCompletion
+    require 'plugins.autocompletion',
     -- Fuzzy finder
     require 'plugins.telescope',
 })
