@@ -74,6 +74,9 @@ vim.schedule(function()
 	vim.o.clipboard = 'unnamedplus'
 end)
 
+-- Clear Newline Symbol
+vim.keymap.set("n", ",m", ":%s/\r", opts)
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
