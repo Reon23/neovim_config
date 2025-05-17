@@ -47,15 +47,5 @@ require("lazy").setup {
       -- fill any relevant options here
     },
  },
--- ColorScheme
-{
-  "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
-  opts = {},
-	-- Runs fuction when plugin starts
-	config = function()
-		vim.cmd("colorscheme tokyonight-night")
-	end
-},
+ require 'plugins.colorscheme'
 }
