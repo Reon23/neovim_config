@@ -29,6 +29,8 @@ require("lazy").setup {
   require "plugins.treesitter",
   -- LSP
   require "plugins.lsp",
+  -- Java LSP
+  require "plugins.nvim-jdtls",
   -- AutoCompletion
   require "plugins.autocompletion",
   -- AutoFormatting
