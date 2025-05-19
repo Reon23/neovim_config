@@ -6,5 +6,6 @@ return {
   },
   config = function()
     require("neogit").setup()
+    vim.keymap.set("n", "<leader>gg", ":Neogit<CR>", { noremap = true, silent = true })
   end,
 }
