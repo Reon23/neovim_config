@@ -18,7 +18,7 @@ rtp:prepend(lazypath)
 -- [Plugins]
 require("lazy").setup {
   -- Color Theme
-  require "plugins.colorscheme",
+  require "plugins.colorscheme_onedark",
   -- File tree
   require "plugins.neotree",
   -- Buffer line
