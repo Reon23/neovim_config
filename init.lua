@@ -39,6 +39,8 @@ require("lazy").setup {
   require "plugins.telescope",
   -- Git Signs
   require "plugins.gitsigns",
+  -- Git interface
+  require "plugins.neogit",
   -- Startup Screen
   require "plugins.alpha",
   -- Indent lines
