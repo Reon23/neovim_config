@@ -17,6 +17,7 @@ return {
         "eslint_d", -- ts/js linter
         "shfmt", -- Shell formatter
         "checkmake", -- linter for Makefiles
+        "google-java-format", -- java formatter
       },
       automatic_installation = true,
     }
@@ -29,6 +30,7 @@ return {
       formatting.terraform_fmt,
       require("none-ls.formatting.ruff").with { extra_args = { "--extend-select", "I" } },
       require "none-ls.formatting.ruff_format",
+      formatting.google_java_format,
     }
 
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
