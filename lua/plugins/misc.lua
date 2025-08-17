@@ -37,4 +37,30 @@ return {
       require("colorizer").setup()
     end,
   },
+  {
+    -- ColorPicker
+    "uga-rosa/ccc.nvim",
+    config = function()
+      local mapping = require "ccc.mapping"
+      require("ccc").setup {
+        mappings = {
+          -- Fine adjustments
+          h = mapping.decrease1,
+          l = mapping.increase1,
+
+          -- Medium jumps
+          H = mapping.decrease5,
+          L = mapping.increase5,
+
+          -- Big jumps
+          ["<C-h>"] = mapping.decrease10,
+          ["<C-l>"] = mapping.increase10,
+        },
+        highlighter = {
+          auto_enable = true,
+          lsp = true,
+        },
+      }
+    end,
+  },
 }
