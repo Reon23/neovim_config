@@ -158,8 +158,8 @@ return {
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
       clangd = {},
+      jedi_language_server = {}, -- For python
       -- gopls = {},
-      pyright = {},
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
@@ -168,7 +168,6 @@ return {
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
       ts_ls = {}, -- tsserver is deprecated
-      -- ruff = {},
       html = { filetypes = { "html", "twig", "hbs" } },
       cssls = {},
       tailwindcss = {},
@@ -218,6 +217,7 @@ return {
     vim.list_extend(ensure_installed, {
       "stylua", -- Used to format Lua code
       "jdtls",
+      "jedi-language-server",
     })
     require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
