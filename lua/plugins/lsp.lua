@@ -167,15 +167,59 @@ return {
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      ts_ls = {}, -- tsserver is deprecated
-      html = { filetypes = { "html", "twig", "hbs" } },
-      cssls = {},
-      tailwindcss = {},
+      html = {
+        filetypes = {
+          "html",
+          "twig",
+          "hbs",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+        },
+      },
+      cssls = {
+        filetypes = {
+          "html",
+          "css",
+        },
+      },
+      tailwindcss = {
+        filetypes = {
+          "html",
+          "css",
+          "scss",
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+        },
+        root_dir = require("lspconfig.util").root_pattern(
+          "tailwind.config.js",
+          "tailwind.config.cjs",
+          "tailwind.config.mjs",
+          "tailwind.config.ts",
+          "postcss.config.js",
+          "package.json",
+          ".git"
+        ),
+      },
       dockerls = {},
       sqlls = {},
       terraformls = {},
       jsonls = {},
       yamlls = {},
+
+      -- React / TS / JS
+      ts_ls = {
+        filetypes = {
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+          "vue",
+        },
+        root_dir = require("lspconfig.util").root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
+      },
 
       lua_ls = {
         -- cmd = {...},
@@ -218,6 +262,7 @@ return {
       "stylua", -- Used to format Lua code
       "jdtls",
       "jedi-language-server",
+      "typescript-language-server",
     })
     require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
