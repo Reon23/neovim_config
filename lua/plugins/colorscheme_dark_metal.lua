@@ -4,9 +4,10 @@ return {
   priority = 1000,
   config = function()
     require("black-metal").setup {
+      theme = "gorgoroth",
       variant = "dark", -- optional
       transparent = true,
     }
-    vim.cmd.colorscheme "gorgoroth"
+    require("black-metal").load()
   end,
 }

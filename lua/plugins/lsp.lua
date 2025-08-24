@@ -179,7 +179,6 @@ return {
       },
       cssls = {
         filetypes = {
-          "html",
           "css",
         },
       },
