@@ -314,6 +314,7 @@ return {
       hi NeoTreeFloatBorder guibg=NONE ctermbg=NONE
       hi NeoTreeEndOfBuffer guibg=NONE ctermbg=NONE
     ]]
+    vim.opt.fillchars:append { eob = " " }
 
     vim.cmd [[nnoremap \ :Neotree reveal<cr>]]
     vim.keymap.set("n", "<leader>e", ":Neotree toggle position=right<CR>", { noremap = true, silent = true }) -- focus file explorer
