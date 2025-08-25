@@ -1,5 +1,6 @@
 require "core.options"
 require "core.keymaps"
+require "core.autocmds"
 
 -- [Plugin Manager]
 -- Installs Lazy plugin manager
