@@ -24,7 +24,7 @@ require("lazy").setup {
   -- Buffer line
   require "plugins.bufferline",
   -- Status line
-  require "plugins.lualine",
+  require "plugins.lualine_custom",
   -- Syntax higlighting
   require "plugins.treesitter",
   -- LSP
