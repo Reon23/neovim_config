@@ -46,6 +46,8 @@ require("lazy").setup {
   require "plugins.alpha",
   -- Indent lines
   require "plugins.indent-blankline",
+  -- Smooth Cursor
+  require "plugins.smear_cursor",
   -- Miscellaneous plugins
   require "plugins.misc",
 }
