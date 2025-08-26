@@ -126,8 +126,8 @@ return {
       -- see `:h neo-tree-custom-commands-global`
       commands = {},
       window = {
-        position = "right",
-        width = 40,
+        position = "current",
+        width = vim.o.columns,
         mapping_options = {
           noremap = true,
           nowait = true,
@@ -183,6 +183,15 @@ return {
           ["<"] = "prev_source",
           [">"] = "next_source",
           ["i"] = "show_file_details",
+        },
+      },
+      event_handlers = {
+        {
+          event = "file_opened",
+          handler = function(file_path)
+            -- auto close neo-tree when opening a file
+            require("neo-tree.command").execute { action = "close" }
+          end,
         },
       },
       nesting_rules = {},
