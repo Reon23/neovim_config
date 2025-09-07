@@ -37,6 +37,7 @@ return {
           "typescript",
           "typescriptreact",
         },
+        prefer_local = "node_modules/.bin",
       },
       formatting.stylua,
       formatting.shfmt.with { args = { "-i", "4" } },

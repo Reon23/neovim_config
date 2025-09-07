@@ -23,6 +23,10 @@ return {
     config = true,
     opts = {},
   },
+  { -- Commenting Support
+    "nvim-mini/mini.nvim",
+    version = "*",
+  },
   {
     -- Highlight todo, notes, etc in comments
     "folke/todo-comments.nvim",
