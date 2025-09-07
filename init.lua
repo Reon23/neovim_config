@@ -21,9 +21,10 @@ require("lazy").setup {
   -- Color Theme
   require "plugins.colorscheme_dark_metal",
   -- File tree
-  require "plugins.neotree",
+  -- require "plugins.neotree",
+  require "plugins.oil",
   -- Buffer line
-  require "plugins.bufferline",
+  -- require "plugins.bufferline",
   -- Status line
   require "plugins.lualine_custom",
   -- Syntax higlighting
