@@ -70,9 +70,7 @@ vim.keymap.set("n", "<C-n>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("i", "jj", "<Esc>")
 
 -- Use System Clipboard
-vim.schedule(function()
-  vim.o.clipboard = "unnamedplus"
-end)
+vim.o.clipboard = "unnamedplus"
 
 -- Clear Newline Symbol
 vim.keymap.set("n", ",m", [[:%s/\r//g<CR>]], opts)
