@@ -159,6 +159,7 @@ return {
     local servers = {
       clangd = {},
       jedi_language_server = {}, -- For python
+      emmet_language_server = {},
       -- gopls = {},
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -262,6 +263,7 @@ return {
       "jdtls",
       "jedi-language-server",
       "typescript-language-server",
+      "emmet-language-server",
     })
     require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
