@@ -4,6 +4,7 @@ return {
     -- Detect tabstop and shiftwidth automatically
     "tpope/vim-sleuth",
   },
+  { "akinsho/git-conflict.nvim", version = "*", config = true },
   {
     -- Powerful Git integration for Vim
     "tpope/vim-fugitive",
