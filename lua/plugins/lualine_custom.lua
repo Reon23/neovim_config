@@ -1,18 +1,30 @@
 return {
   "nvim-lualine/lualine.nvim",
   config = function()
+    local function read_pywal_colors()
+      local wal_colors_path = os.getenv "HOME" .. "/.cache/wal/colors.json"
+      local file = io.open(wal_colors_path, "r")
+      if not file then
+        return nil
+      end
+      local json = file:read "*a"
+      file:close()
+      return vim.fn.json_decode(json)
+    end
+
+    local wal = read_pywal_colors()
     -- 🎨 Define colors to match your theme
     local colors = {
-      bg = "#080808", -- background (editor bg)
+      bg = wal.special.background, -- background (editor bg)
       fg = "#d4d4d4", -- foreground (default text)
-      blue = "#5e4337", -- tags / keywords
+      blue = wal.colors.color6, -- tags / keywords
       cyan = "#9cdcfe", -- attributes
       orange = "#ce9178", -- strings
-      green = "#855d4c", -- numbers / constants
-      violet = "#918d4d", -- functions / keywords
+      green = wal.colors.color4, -- numbers / constants
+      violet = wal.colors.color5, -- functions / keywords
       red = "#803d3d", -- errors
       yellow = "#dcdcaa", -- light yellow (for commands / highlights)
-      darkblue = "#7d6a61", -- darker shade for sections
+      darkblue = wal.colors.color2, -- darker shade for sections
     }
 
     -- Custom theme
