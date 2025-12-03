@@ -19,7 +19,7 @@ rtp:prepend(lazypath)
 -- [Plugins]
 require("lazy").setup {
   -- Color Theme
-  require "plugins.colorscheme_dark_metal",
+  require "plugins.colorscheme_pywal",
   -- File tree
   -- require "plugins.neotree",
   require "plugins.oil",
