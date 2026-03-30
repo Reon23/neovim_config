@@ -5,6 +5,7 @@ return {
     -- OR { "nvim-tree/nvim-web-devicons" },
   },
   lazy = false, -- don’t lazy load, oil doesn’t recommend it
+  show_hidden = true,
   opts = {
     keymaps = {
       ["<C-s>"] = false, -- disable horizontal split on <C-s>

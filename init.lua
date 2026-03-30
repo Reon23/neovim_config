@@ -19,14 +19,14 @@ rtp:prepend(lazypath)
 -- [Plugins]
 require("lazy").setup {
   -- Color Theme
-  require "plugins.colorscheme_pywal",
+  require "plugins.colorscheme_catpuccin",
   -- File tree
   -- require "plugins.neotree",
   require "plugins.oil",
   -- Buffer line
   -- require "plugins.bufferline",
   -- Status line
-  require "plugins.lualine_custom",
+  require "plugins.lualine",
   -- Syntax higlighting
   require "plugins.treesitter",
   -- LSP
@@ -51,4 +51,8 @@ require("lazy").setup {
   require "plugins.smear_cursor",
   -- Miscellaneous plugins
   require "plugins.misc",
+  -- Prevent bad habits
+  -- require "plugins.hardtime",
+  -- Noice
+  require "plugins.noice",
 }

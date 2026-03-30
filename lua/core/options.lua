@@ -23,6 +23,8 @@ vim.o.softtabstop = 4 -- Number of spaces that a tab counts for while performing
 
 vim.o.expandtab = true -- Convert tab to spaces
 
+vim.o.showtabline = 0 -- removes the top left buffername
+
 vim.o.scrolloff = 4 -- Minimal number of screen lines to keep above and below the cursor (default: 0)
 
 vim.o.sidescrolloff = 8 -- Minimal number of screen columns either side of cursor if wrap is `false` (default: 0)
@@ -43,8 +45,6 @@ vim.o.numberwidth = 4 -- Set number column width to 2 {default 4} (default: 4)
 vim.o.swapfile = false -- Creates a swapfile (default: true)
 
 vim.o.smartindent = true -- Make indenting smarter again (default: false)
-
-vim.o.showtabline = 2 -- Always show tabs (default: 1)
 
 vim.o.backspace = "indent,eol,start" -- Allow backspace on (default: 'indent,eol,start')
 

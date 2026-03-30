@@ -209,6 +209,25 @@ return {
       jsonls = {},
       yamlls = {},
 
+      qmlls = {
+        cmd = { "qmlls" },
+        filetypes = { "qml", "qmljs" },
+        root_dir = function()
+          return vim.loop.cwd()
+        end,
+        settings = {
+          qml = {
+            importPaths = {
+              "/usr/lib/qt6/qml",
+            },
+            format = {
+              enable = true,
+            },
+            validate = true,
+          },
+        },
+      },
+
       -- React / TS / JS
       ts_ls = {
         filetypes = {
@@ -264,6 +283,7 @@ return {
       "jedi-language-server",
       "typescript-language-server",
       "emmet-language-server",
+      "qmlls",
     })
     require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
