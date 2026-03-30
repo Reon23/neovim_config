@@ -1,20 +1,11 @@
 return {
-  "stevearc/oil.nvim",
-  dependencies = {
-    { "echasnovski/mini.icons", opts = {} },
-    -- OR { "nvim-tree/nvim-web-devicons" },
-  },
-  lazy = false, -- don’t lazy load, oil doesn’t recommend it
-  show_hidden = true,
-  opts = {
-    keymaps = {
-      ["<C-s>"] = false, -- disable horizontal split on <C-s>
-    },
-  },
-  config = function(_, opts)
-    require("oil").setup(opts)
-
-    -- Global keymap for opening Oil
-    vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-  end,
+  'stevearc/oil.nvim',
+  ---@module 'oil'
+  ---@type oil.SetupOpts
+  opts = {},
+  -- Optional dependencies
+  dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+  -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+  -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+  lazy = false,
 }
