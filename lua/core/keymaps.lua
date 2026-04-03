@@ -17,10 +17,10 @@ vim.keymap.set("n", "<leader>se", "<C-w>=", { silent = true, desc = "Make splits
 vim.keymap.set("n", "<leader>xs", ":close<CR>", { silent = true, desc = "Close split" })
 
 -- Resize Splits
-vim.keymap.set("n", "<Up>", ":resize -2<CR>", opts)
-vim.keymap.set("n", "<Down>", ":resize +2<CR>", opts)
-vim.keymap.set("n", "<Left>", ":vertical resize -2<CR>", opts)
-vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>", opts)
+vim.keymap.set("n", "<Up>", ":resize -2<CR>", { silent = true})
+vim.keymap.set("n", "<Down>", ":resize +2<CR>", { silent = true})
+vim.keymap.set("n", "<Left>", ":vertical resize -2<CR>", { silent = true})
+vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>", { silent = true})
 
 -- delete single character without copying into register
 vim.keymap.set("n", "x", '"_x', opts)
