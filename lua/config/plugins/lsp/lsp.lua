@@ -3,11 +3,11 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-		{ "folke/lazydev.nvim", opts = {} },
+		{ "folke/lazydev.nvim",                  opts = {} },
 	},
 	config = function()
 		-- import cmp-nvim-lsp plugin
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		local cmp_nvim_lsp = require "cmp_nvim_lsp"
 
 		-- used to enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -16,12 +16,12 @@ return {
 			capabilities = capabilities,
 		})
 
-		vim.diagnostic.config({
-			virtual_text = true,   -- shows error inline
-			signs = true,          -- gutter icons
+		vim.diagnostic.config {
+			virtual_text = true, -- shows error inline
+			signs = true,  -- gutter icons
 			underline = true,
 			update_in_insert = false,
-		})
+		}
 
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
@@ -60,15 +60,7 @@ return {
 				map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
 
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-
-				vim.api.nvim_create_autocmd("LspDetach", {
-					group = vim.api.nvim_create_augroup("kickstart-lsp-detach", { clear = true }),
-					callback = function(event2)
-						vim.lsp.buf.clear_references()
-						vim.api.nvim_clear_autocmds { group = "kickstart-lsp-highlight", buffer = event2.buf }
-					end
-				})
-			end
+			end,
 		})
-	end
-	}
+	end,
+}
