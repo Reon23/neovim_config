@@ -21,3 +21,4 @@ vim.o.swapfile = false
 vim.o.smartindent = true
 
 vim.o.undofile = true
+vim.opt.runtimepath:append(vim.fn.stdpath "data" .. "/site")

@@ -2,6 +2,7 @@ return {
 	"mason-org/mason-lspconfig.nvim",
 	opts = {
 		ensure_intalled = {
+			"ruff",
 			"html",
 			"ts_ls",
 			"cssls",
@@ -14,9 +15,9 @@ return {
 	dependencies = {
 		{
 			"mason-org/mason.nvim",
-			opts = {}
+			opts = {},
 		},
 
-		"neovim/nvim-lspconfig"
+		"neovim/nvim-lspconfig",
 	},
 }
