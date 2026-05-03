@@ -1,9 +1,6 @@
 -- leader key
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<C-s>", ":write<CR>", { silent = true, desc = "Save file" })
-vim.keymap.set("n", "<C-q>", ":quit<CR>", { silent = true, desc = "Quit Neovim" })
-
 -- Split keybinds
 -- vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", { silent = true, desc = "Move to left split" })
 -- vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", { silent = true, desc = "Move to right split" })
