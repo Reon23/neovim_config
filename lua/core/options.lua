@@ -5,7 +5,7 @@ vim.opt.wrap = false
 vim.opt.termguicolors = true
 
 -- Use system clipboard as default
--- vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4

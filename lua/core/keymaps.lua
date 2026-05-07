@@ -14,12 +14,6 @@ vim.keymap.set("n", "<C-w>v", ":vsplit<CR><C-w>l", { silent = true, desc = "Crea
 vim.keymap.set("n", "<leader>x", ":bdelete!<CR>", { silent = true, desc = "Close buffer" })
 vim.keymap.set("n", "<leader>xs", ":close<CR>", { silent = true, desc = "Close split" })
 
--- Resize Splits
-vim.keymap.set("n", "<Up>", ":resize -2<CR>", { silent = true })
-vim.keymap.set("n", "<Down>", ":resize +2<CR>", { silent = true })
-vim.keymap.set("n", "<Left>", ":vertical resize -2<CR>", { silent = true })
-vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>", { silent = true })
-
 -- delete single character without copying into register
 vim.keymap.set("n", "x", '"_x', { silent = true })
 
