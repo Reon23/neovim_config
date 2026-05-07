@@ -1,12 +1,9 @@
 -- leader key
 vim.g.mapleader = " "
 
--- Split keybinds
--- vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", { silent = true, desc = "Move to left split" })
--- vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", { silent = true, desc = "Move to right split" })
--- vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", { silent = true, desc = "Move to bottom split" })
--- vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", { silent = true, desc = "Move to top split" })
---
+vim.keymap.set("n", "<C-q>", ":q<CR>", { silent = true, desc = "Close file" })
+vim.keymap.set("n", "<C-s>", ":w<CR>", { silent = true, desc = "Save file" })
+
 vim.keymap.set("n", "<C-w>v", ":vsplit<CR><C-w>l", { silent = true, desc = "Create vertical split" })
 -- vim.keymap.set("n", "<leader>h", ":split<CR><C-w>j", { silent = true, desc = "Create horizontal split" })
 -- vim.keymap.set("n", "<leader>se", "<C-w>=", { silent = true, desc = "Make splits equal in size"})
