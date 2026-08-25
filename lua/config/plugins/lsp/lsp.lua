@@ -17,6 +17,11 @@ return {
     })
     vim.lsp.enable "clangd"
 
+    vim.lsp.config("cmake-language-server", {
+      cmd = { "cmake-language-server" },
+    })
+    vim.lsp.enable "cmake-language-server"
+
     vim.lsp.config("nil_ls", {
       cmd = { "nil" },
       settings = {
